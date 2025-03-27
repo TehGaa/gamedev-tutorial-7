@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://yt2en81kooak"]
+
+[ext_resource type="PackedScene" uid="uid://dtin1nn3j8x8p" path="res://scenes/World 1.tscn" id="1_iuanv"]
+[ext_resource type="PackedScene" uid="uid://bwwiyjcvmgsd3" path="res://scenes/AreaTrigger.tscn" id="1_nm6r8"]
+[ext_resource type="PackedScene" uid="uid://cok430426uip6" path="res://scenes/Player.tscn" id="1_nmr0t"]
+
+[node name="Level 1" type="Node3D"]
+
+[node name="WinningArea" parent="." instance=ExtResource("1_nm6r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.11261, 31.9408)
+sceneName = "WinScreen"
+
+[node name="LoseArea" parent="." instance=ExtResource("1_nm6r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.696045, -8.57922, 15.5146)
+
+[node name="Player" parent="." instance=ExtResource("1_nmr0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.397084, 1.45968, -0.813587)
+
+[node name="World 1" parent="." instance=ExtResource("1_iuanv")]
